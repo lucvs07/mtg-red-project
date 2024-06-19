@@ -1,0 +1,31 @@
+footer#footer {
+    font-size: calc(10px + 2vmin);
+    color: white;
+    padding:  0.5rem 2rem;
+    background-color: #333;
+    animation: pulse-shadow 5s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+@keyframes pulse-shadow {
+    50%{
+      box-shadow: 0 0.2rem 0.8rem rgba(152,223,175,0.25);
+    }
+}
+
+span , a {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    transition:  color 0.4s ease-in-out;
+}
+a:hover{
+    color: #C1292E;
+}

@@ -16,16 +16,18 @@ export function CardList(){
     }, []);
     console.log(cartas[1])
     return (
-        <section id="card-list">
-            {cartas.map(carta => (
-                carta.imageUrl ?
-                <Card
-                    key={carta.multiverseid}
-                    imageUrl={carta.imageUrl}
-                    cardName={carta.name}
-                    cardArtist={carta.artist}
-                /> : <></>
-            ))}
-        </section>
+        <>
+            <section id="card-list">
+                {cartas.map(carta => (
+                    carta.imageUrl ?
+                    <Card
+                        key={carta.multiverseid}
+                        imageUrl={carta.imageUrl}
+                        cardName={carta.name}
+                        cardArtist={carta.artist}
+                    /> : <></>
+                ))}
+            </section>
+        </>
     );
 };
