@@ -2,19 +2,31 @@ article#card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 1rem;
-    gap: 0.5rem;
-    background-color: aqua;
+    gap: 1.2rem;
     margin-bottom: 1rem;
     border-radius: 1rem;
+    background-color: #141414;
 
 }
 
 article#card .card-img {
-    width: 75%;
+    width: 100%;
     border-radius: 0.7rem;
 }
 
 article#card .card-title , .card-artist {
     text-align: center;
+}
+
+article#card .tilt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+article#card .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

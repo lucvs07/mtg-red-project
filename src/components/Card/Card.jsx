@@ -1,13 +1,36 @@
 import React from "react";
 import './styles.css';
+import { Tilt } from "react-tilt";
+import { Pencil, Fire } from "@phosphor-icons/react";
+
+const defaultOptions = {
+	reverse:        false,  // reverse the tilt direction
+	max:            35,     // max tilt rotation (degrees)
+	perspective:    1000,   // Transform perspective, the lower the more extreme the tilt gets.
+	scale:          1.1,    // 2 = 200%, 1.5 = 150%, etc..
+	speed:          1000,   // Speed of the enter/exit transition
+	transition:     true,   // Set a transition on enter/exit.
+	axis:           null,   // What axis should be disabled. Can be X or Y.
+	reset:          true,    // If the tilt effect has to be reset on exit.
+	easing:         "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
+}
 
 
 export function Card({imageUrl, cardName, cardArtist}){
     return (
+        
         <article id="card">
-            <img src={imageUrl} alt={cardName} className="card-img"/>
-            <h3 className="card-title">{cardName}</h3>
-            <h4 className="card-artist">{cardArtist}</h4>
+            <Tilt options={defaultOptions} className="tilt">
+                <img src={imageUrl} alt={cardName} className="card-img"/>
+            </Tilt>
+            <div className="title">
+                <Fire size={48} weight="bold"/>
+                <h3 className="card-title">{cardName}</h3>
+            </div>
+            <div className="title">
+                <Pencil size={32} weight="bold"/>
+                <h4 className="card-artist">{cardArtist}</h4>    
+            </div>
         </article>
 
     );

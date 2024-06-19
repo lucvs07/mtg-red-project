@@ -1,6 +1,14 @@
 section#card-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     column-gap: 2rem;
     row-gap: 2rem;
+    margin: 4rem auto;
+    padding: 0 4rem;
+}
+@media screen and (min-width: 320px) and (max-width:767px){
+    section#card-list{
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+        padding: 0 2rem;
+    }
 }
